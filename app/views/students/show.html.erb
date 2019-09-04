@@ -1,0 +1,22 @@
+<h1><%=@student.name%></h1>
+<h2>Mod: <%=@student.mod%></h2>
+<h2>Ducks</h2>
+<% array = [] %>
+<%@ducks.each do |duck|%>
+<% if duck.student_id == @student.id%>
+    <% array << duck %>
+    <%end%>
+<%end%>
+<ul>
+<% array.each do |duck| %>
+    <li>
+        <%=duck%>
+    </li>
+<%end%>
+</ul>
+<%if array.length == 0%>
+    <h3>No ducks yet!</h3>
+<%end%>
+
+<a class="button" href="/students/edit/<%=@student.id%>">Edit</a>
+
