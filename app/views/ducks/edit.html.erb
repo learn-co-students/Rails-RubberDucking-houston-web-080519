@@ -1,0 +1,8 @@
+<form action = "/ducks/edit/<%=@duck.id%>" method = POST>
+<input id = "hidden" type = 'hidden' name = "_method" value = "patch"/>
+<label for = "name">Name</label>
+<input id = "name" type = "text" name = "name" value = "<%=@duck.name%>" required = "required"/>
+<label for = "description">Description</label>
+<input id = "description" type = "text" name = "description" value = "<%=@duck.description%>" required = "required"/>
+<input type = "submit" value = "Submit"/>
+</form>

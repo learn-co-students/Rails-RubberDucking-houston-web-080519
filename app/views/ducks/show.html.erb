@@ -1,0 +1,9 @@
+<h1><%=@duck.name%></h1>
+<h2><%=@duck.description%></h2>
+<%@students.each do |student|%>
+    <%if student.id == @duck.student_id%>
+        <h2>Belongs to: <%=@duck.student.name%></h2>
+    <%end%>
+<%end%>
+
+<a class="button" href="/ducks/edit/<%=@duck.id%>">Edit</a>
